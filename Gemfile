@@ -15,19 +15,22 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'figaro'
-gem 'pry'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'rspec-rails'
   gem 'shoulda'
   gem 'faker'
-  gem 'factory_girl_rails'
-  gem 'spring'
+  gem 'pry-rails'
 end
 
 group :development do
   gem 'spring'
+  gem 'web-console', '~> 2.0'
+end
+
+group :test do
+  gem 'simplecov'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
 end
