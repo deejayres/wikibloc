@@ -23,6 +23,7 @@ group :development, :test do
   gem 'shoulda'
   gem 'faker'
   gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -34,5 +35,4 @@ end
 group :test do
   gem 'simplecov'
   gem 'factory_girl_rails'
-  gem 'rspec-rails'
 end
