@@ -165,6 +165,7 @@
         null,
         null,
         null,
+        1,
         null
       ],
       "/Users/eresso/dev/bloc/wikibloc/config/initializers/assets.rb": [
@@ -212,7 +213,7 @@
         1,
         null,
         null,
-        null,
+        1,
         null,
         null,
         null,
@@ -496,6 +497,20 @@
         null,
         1
       ],
+      "/Users/eresso/dev/bloc/wikibloc/config/initializers/setup_mail.rb": [
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/eresso/dev/bloc/wikibloc/config/initializers/wrap_parameters.rb": [
         null,
         null,
@@ -556,6 +571,6 @@
         null
       ]
     },
-    "timestamp": 1458535719
+    "timestamp": 1458622859
   }
 }
