@@ -1,2 +1,20 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="jumbotron">
+  <h1>Wikibloc</h1>
+  <p>Stop. Collaborate and wiki.</p>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h3>Free to Use.</h3>
+      <p>Sign up today to start your own wikis and collaborate with others to create a one-stop doc for shared info!</p>
+    </div>
+    <div class="col-md-3">
+      <h3>Premium Access.</h4>
+      <p>As a premium member, create and manage unlimited private wikis.</p>
+    </div>
+    <div class="col-md-6">
+      <%= render partial: 'devise/registrations/sign_up' %>
+    </div>
+  </div>
+</div>

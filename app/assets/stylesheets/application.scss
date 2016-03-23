@@ -14,9 +14,36 @@
  *= require_self
  */
  @import "bootstrap-sprockets";
+ @import "bootswatch/readable/variables";
  @import "bootstrap";
+ @import "bootswatch/readable/bootswatch";
 
  body {
-  padding-top: 50px;
+  padding-top: 65px;
   padding-bottom: 20px;
+}
+
+.authform {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.jumbotron {
+  background-image: image-url('stack.png');
+  background-size: 100% 100%;
+}
+
+.jumbotron h1 {
+  margin-left: 5%;
+  color: #FEFEFE;
+}
+
+.jumbotron p {
+  margin-left: 6%;
+  color: #D5D5D5;
+}
+
+.alert {
+  margin-bottom: 0px;
 }
