@@ -14,7 +14,10 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
+gem 'bootswatch-rails'
 gem 'figaro'
+gem 'devise'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -22,15 +25,16 @@ group :development, :test do
   gem 'shoulda'
   gem 'faker'
   gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
 group :development do
   gem 'spring'
   gem 'web-console', '~> 2.0'
+  gem 'rails_layout'
 end
 
 group :test do
   gem 'simplecov'
   gem 'factory_girl_rails'
-  gem 'rspec-rails'
 end
