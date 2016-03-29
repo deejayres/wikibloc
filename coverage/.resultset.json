@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/eresso/dev/bloc/wikibloc/spec/controllers/welcome_controller_spec.rb": [
+      "/Users/resso/bloc/wikibloc/spec/controllers/welcome_controller_spec.rb": [
         1,
         null,
         1,
@@ -15,7 +15,7 @@
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/spec/rails_helper.rb": [
+      "/Users/resso/bloc/wikibloc/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -23,27 +23,6 @@
         1,
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
         1,
         null,
         1,
@@ -51,7 +30,6 @@
         null,
         null,
         null,
-        1,
         null,
         null,
         null,
@@ -68,20 +46,48 @@
         null,
         1,
         null,
+        1,
         null,
         1,
         null,
         null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/environment.rb": [
+      "/Users/resso/bloc/wikibloc/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/application.rb": [
+      "/Users/resso/bloc/wikibloc/config/application.rb": [
         1,
         null,
         1,
@@ -118,12 +124,12 @@
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/boot.rb": [
+      "/Users/resso/bloc/wikibloc/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/environments/test.rb": [
+      "/Users/resso/bloc/wikibloc/config/environments/test.rb": [
         1,
         null,
         null,
@@ -168,7 +174,7 @@
         1,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/initializers/assets.rb": [
+      "/Users/resso/bloc/wikibloc/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -181,7 +187,7 @@
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/initializers/backtrace_silencers.rb": [
+      "/Users/resso/bloc/wikibloc/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -190,12 +196,12 @@
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/initializers/cookies_serializer.rb": [
+      "/Users/resso/bloc/wikibloc/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/initializers/devise.rb": [
+      "/Users/resso/bloc/wikibloc/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -462,13 +468,13 @@
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/initializers/filter_parameter_logging.rb": [
+      "/Users/resso/bloc/wikibloc/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/initializers/inflections.rb": [
+      "/Users/resso/bloc/wikibloc/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -486,18 +492,18 @@
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/initializers/mime_types.rb": [
+      "/Users/resso/bloc/wikibloc/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/initializers/session_store.rb": [
+      "/Users/resso/bloc/wikibloc/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/initializers/setup_mail.rb": [
+      "/Users/resso/bloc/wikibloc/config/initializers/setup_mail.rb": [
         1,
         0,
         0,
@@ -511,7 +517,7 @@
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/initializers/wrap_parameters.rb": [
+      "/Users/resso/bloc/wikibloc/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -527,14 +533,39 @@
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/config/routes.rb": [
+      "/Users/resso/bloc/wikibloc/spec/factories/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/resso/bloc/wikibloc/spec/factories/wiki.rb": [
+        1,
+        1,
+        1,
         1,
         1,
         1,
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/app/models/user.rb": [
+      "/Users/resso/bloc/wikibloc/config/routes.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/resso/bloc/wikibloc/app/models/user.rb": [
         1,
         null,
         null,
@@ -544,21 +575,25 @@
         1,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/app/helpers/application_helper.rb": [
+      "/Users/resso/bloc/wikibloc/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/app/helpers/welcome_helper.rb": [
+      "/Users/resso/bloc/wikibloc/app/helpers/welcome_helper.rb": [
         1,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/app/controllers/welcome_controller.rb": [
+      "/Users/resso/bloc/wikibloc/app/helpers/wikis_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/resso/bloc/wikibloc/app/controllers/welcome_controller.rb": [
         1,
         1,
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/app/controllers/application_controller.rb": [
+      "/Users/resso/bloc/wikibloc/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -587,7 +622,69 @@
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/spec/models/wiki_spec.rb": [
+      "/Users/resso/bloc/wikibloc/spec/controllers/wikis_controller_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/resso/bloc/wikibloc/app/controllers/wikis_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null
+      ],
+      "/Users/resso/bloc/wikibloc/spec/models/wiki_spec.rb": [
         1,
         null,
         1,
@@ -611,12 +708,12 @@
         null,
         null
       ],
-      "/Users/eresso/dev/bloc/wikibloc/app/models/wiki.rb": [
+      "/Users/resso/bloc/wikibloc/app/models/wiki.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1459108018
+    "timestamp": 1459212891
   }
 }
