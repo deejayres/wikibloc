@@ -17,6 +17,10 @@ class ApplicationController < ActionController::Base
     @devise_mapping ||= Devise.mappings[:user]
   end
 
+  def after_sign_in_path_for(resource)
+    wikis_path
+  end
+
   protected
 
   def configure_permitted_parameters
