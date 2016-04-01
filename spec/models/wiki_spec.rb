@@ -18,5 +18,9 @@ RSpec.describe Wiki, type: :model do
     it "responds to private" do
       expect(wiki).to respond_to(:private)
     end
+
+    it "is public by default" do
+      expect(wiki.private).to be(false)
+    end
   end
 end
