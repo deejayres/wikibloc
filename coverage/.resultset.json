@@ -1,16 +1,30 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/resso/bloc/wikibloc/spec/controllers/welcome_controller_spec.rb": [
+      "/Users/resso/bloc/wikibloc/spec/models/wiki_spec.rb": [
         1,
         null,
         1,
+        5,
+        5,
+        null,
+        2,
         null,
         1,
         1,
         1,
+        null,
+        null,
+        1,
         1,
         null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
         null,
         null,
         null
@@ -23,7 +37,9 @@
         1,
         1,
         1,
+        1,
         null,
+        1,
         null,
         null,
         null,
@@ -72,6 +88,10 @@
         1,
         null,
         null,
+        null,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/resso/bloc/wikibloc/config/environment.rb": [
@@ -527,9 +547,34 @@
         null,
         null
       ],
+      "/Users/resso/bloc/wikibloc/spec/factories/user.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/resso/bloc/wikibloc/spec/factories/wiki.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/resso/bloc/wikibloc/config/routes.rb": [
         1,
+        null,
         1,
+        null,
+        1,
+        null,
         1,
         null,
         null
@@ -540,6 +585,8 @@
         null,
         1,
         null,
+        null,
+        1,
         null
       ],
       "/Users/resso/bloc/wikibloc/app/helpers/application_helper.rb": [
@@ -550,49 +597,16 @@
         1,
         null
       ],
-      "/Users/resso/bloc/wikibloc/app/controllers/welcome_controller.rb": [
+      "/Users/resso/bloc/wikibloc/app/helpers/wikis_helper.rb": [
         1,
-        1,
-        null,
         null
       ],
-      "/Users/resso/bloc/wikibloc/app/controllers/application_controller.rb": [
-        1,
-        null,
-        null,
-        1,
-        1,
-        null,
-        1,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
-        null,
-        1,
-        0,
-        0,
-        0,
-        null,
-        null
-      ],
-      "/Users/resso/bloc/wikibloc/spec/models/user_spec.rb": [
-        1,
-        null,
+      "/Users/resso/bloc/wikibloc/app/models/wiki.rb": [
         1,
         1,
         null
       ]
     },
-    "timestamp": 1458688678
+    "timestamp": 1459540253
   }
 }

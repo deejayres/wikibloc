@@ -1,0 +1,20 @@
+// Place all the styles related to the Wikis controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+  line-height: 1.0;
+}
+
+.row {
+  margin-top: 2% ;
+}
+
+.white-background {
+  background-color: #FFFFFF;
+}

@@ -36,5 +36,5 @@ end
 
 group :test do
   gem 'simplecov'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', "~> 4.0"
 end
