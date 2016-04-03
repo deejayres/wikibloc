@@ -17,6 +17,7 @@ gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'figaro'
 gem 'devise'
+gem 'pundit'
 
 
 group :development, :test do
