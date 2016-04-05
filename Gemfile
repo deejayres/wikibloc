@@ -18,6 +18,7 @@ gem 'bootswatch-rails'
 gem 'figaro'
 gem 'devise'
 gem 'pundit'
+gem 'rolify'
 
 
 group :development, :test do
