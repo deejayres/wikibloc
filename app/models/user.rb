@@ -6,4 +6,13 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_many :wikis
+
+  after_initialize :set_role
+
+  private
+
+  def set_role
+    self.add_role :standard
+  end
+  
 end

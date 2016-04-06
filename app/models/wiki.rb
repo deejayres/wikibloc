@@ -1,4 +1,4 @@
 class Wiki < ActiveRecord::Base
   belongs_to :user
-  resourcify 
+  resourcify
 end

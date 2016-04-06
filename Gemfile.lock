@@ -111,6 +111,9 @@ GEM
       pry (>= 0.9.10)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
+    pundit-matchers (1.0.2)
+      pundit (~> 1.0, >= 1.0.0)
+      rspec-rails (>= 3.0.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -227,6 +230,7 @@ DEPENDENCIES
   pg
   pry-rails
   pundit
+  pundit-matchers (~> 1.0.2)
   rails (= 4.2.5)
   rails_layout
   rolify

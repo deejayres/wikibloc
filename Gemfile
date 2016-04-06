@@ -39,4 +39,5 @@ end
 group :test do
   gem 'simplecov'
   gem 'factory_girl_rails', "~> 4.0"
+  gem 'pundit-matchers', '~> 1.0.2'
 end

@@ -1,5 +1,7 @@
 require 'factory_girl_rails'
 require 'simplecov'
+require 'pundit/matchers'
+
 SimpleCov.start
 
 RSpec.configure do |config|

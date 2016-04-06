@@ -14,8 +14,8 @@ class WikisController < ApplicationController
 
   def create
     @wiki = Wiki.new
-    @wiki.title = params[:wiki][:title]
-    @wiki.body = params[:wiki][:body]
+    authorize @wiki
+    @wiki = current_user.wikis.build(wiki_params)
 
     if @wiki.save
       flash[:notice] = "Wiki was saved successfully."
@@ -32,8 +32,8 @@ class WikisController < ApplicationController
 
   def update
     @wiki = Wiki.find(params[:id])
-    @wiki.title = params[:wiki][:title]
-    @wiki.body = params[:wiki][:body]
+    authorize @wiki
+    @wiki.assign_attributes(wiki_params)
 
     if @wiki.save
       flash[:notice] = "Wiki was saved successfully."
@@ -46,7 +46,7 @@ class WikisController < ApplicationController
 
   def destroy
     @wiki = Wiki.find(params[:id])
-
+    authorize @wiki
     if @wiki.destroy
       flash[:notice] = "\"#{@wiki.title}\" was deleted successfully."
       redirect_to wikis_path
@@ -54,5 +54,11 @@ class WikisController < ApplicationController
       flash.now[:alert] = "There was an error deleting the post. Please try again."
       render :show
     end
+  end
+
+  private
+
+  def wiki_params
+    params.require(:wiki).permit(policy(@wiki).permitted_attributes)
   end
 end
