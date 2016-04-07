@@ -17,6 +17,8 @@ gem 'bootstrap-sass'
 gem 'bootswatch-rails'
 gem 'figaro'
 gem 'devise'
+gem 'pundit'
+gem 'rolify'
 
 
 group :development, :test do
@@ -37,4 +39,5 @@ end
 group :test do
   gem 'simplecov'
   gem 'factory_girl_rails', "~> 4.0"
+  gem 'pundit-matchers', '~> 1.0.2'
 end
