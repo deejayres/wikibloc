@@ -19,11 +19,11 @@ class WikiPolicy
   end
 
   def edit?
-    true
+    user.present?
   end
 
   def update?
-    true
+    user.present?
   end
 
   def destroy?
@@ -38,5 +38,5 @@ class WikiPolicy
     end
   end
 
-  
+
 end
