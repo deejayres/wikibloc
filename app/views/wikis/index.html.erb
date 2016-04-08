@@ -15,6 +15,21 @@
 
       <div class="row">
         <div class="col-md-12">
+          <%= form_tag wikis_path, method: :get do %>
+            <div class="form-group">
+              <div class="input-group">
+                <%= text_field_tag :search, params[:search], class: "form-control" %>
+                  <span class="input-group-btn">
+                    <%= submit_tag "Search", name: nil, class: 'btn btn-default' %>
+                  </span>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
           <div class="list-group">
             <% @wikis.each do |wiki| %>
               <a href="<%= wiki_path(wiki.id) %>" class="list-group-item">
