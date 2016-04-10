@@ -19,6 +19,7 @@ gem 'figaro'
 gem 'devise'
 gem 'pundit'
 gem 'rolify'
+gem 'redcarpet'
 
 
 group :development, :test do
