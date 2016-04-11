@@ -20,6 +20,7 @@ gem 'devise'
 gem 'pundit'
 gem 'rolify'
 gem 'redcarpet'
+gem 'stripe'
 
 
 group :development, :test do
