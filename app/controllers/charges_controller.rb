@@ -1,6 +1,6 @@
 class ChargesController < ApplicationController
   before_action :authenticate_user!
-  # after_action current_user.add_role :premium, only: :create
+  before_action :check_if_premium
 
   def create
     customer = Stripe::Customer.create(
@@ -29,6 +29,15 @@ class ChargesController < ApplicationController
       description: "Premium Wikibloc Membership - #{current_user.username}",
       amount: Amount.default
     }
+  end
+
+  private
+
+  def check_if_premium
+    if current_user.is_premium?
+      flash[:notice] = "You are already a premium member!"
+      redirect_to wikis_path
+    end
   end
 
 end
