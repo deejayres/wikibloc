@@ -42,4 +42,5 @@ group :test do
   gem 'simplecov'
   gem 'factory_girl_rails', "~> 4.0"
   gem 'pundit-matchers', '~> 1.0.2'
+  gem 'stripe-ruby-mock', '~> 2.2.2', :require => 'stripe_mock'
 end
