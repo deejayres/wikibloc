@@ -7,7 +7,8 @@ class ChargesController < ApplicationController
       email: current_user.email,
       card: params[:stripeToken]
     )
-    charge = Stripe::Charge.create(
+
+    Stripe::Charge.create(
       customer: customer.id,
       amount: Amount.default,
       description: "Premium Wikibloc Membership - #{current_user.email}",
