@@ -33,7 +33,10 @@
           <div class="list-group">
             <% @wikis.each do |wiki| %>
               <a href="<%= wiki_path(wiki.id) %>" class="list-group-item">
-              <%= wiki.title %>
+                <% if wiki.private %>
+                  <span class="badge">private</span>
+                <% end %>
+                <%= wiki.title %>
               </a>
             <% end %>
           </div>

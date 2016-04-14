@@ -17,4 +17,14 @@ RSpec.describe User, type: :model do
     end
   end
 
+  describe ".avatar_url" do
+    let(:known_user) { FactoryGirl.create(:user, email: "blochead@bloc.io") }
+
+    it "returns the proper Gravitar URL" do
+      expected_gravitar = "http://gravatar.com/avatar/bb6d1172212c180cfbdb7039129d7b03.png?s=48"
+
+      expect(known_user.avatar_url(48)).to eq(expected_gravitar)
+    end
+  end
+
 end
