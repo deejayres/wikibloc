@@ -48,7 +48,7 @@ RSpec.describe ChargesController, type: :controller do
       @my_user.add_role :premium
       post :create
 
-      expect(response).to redirect_to(wikis_path)
+      expect(response).to redirect_to(profile_path)
     end
   end
 end

@@ -3,11 +3,13 @@
     <div class="col-md-8 col-md-offset-2">
 
       <div class="media">
-        <br />
         <div class ="media-body">
           <h2 class="media-heading">Welcome, <%= @user.username %>!</h2>
           <% if @user.is_premium? %>
-            <p>Hey, thanks for being a premium user!  You may create your own private wikis</p>
+            <h5>Hey, thanks for being a premium user!  You may create your own private wikis.</h5>
+          <% else %>
+            <h5>Not a premium member? Upgrade today to create your own private wiki where YOU choose your collaborators!</h5>
+            <%= render partial: 'charges/new_charge' %>
           <% end %>
         </div>
 
@@ -34,15 +36,17 @@
       </div>
 
       <div class="row">
-        <div class="list-group">
-          <% @user.wikis.each do |wiki| %>
-            <a href="<%= wiki_path(wiki.id) %>" class="list-group-item">
-              <% if wiki.private %>
-                <span class="badge">private</span>
-              <% end %>
-              <%= wiki.title %>
-            </a>
-          <% end %>
+        <div class="col-md-12">
+          <div class="list-group">
+            <% @user.wikis.each do |wiki| %>
+              <a href="<%= wiki_path(wiki.id) %>" class="list-group-item">
+                <% if wiki.private %>
+                  <span class="badge">private</span>
+                <% end %>
+                <%= wiki.title %>
+              </a>
+            <% end %>
+          </div>
         </div>
       </div>
 

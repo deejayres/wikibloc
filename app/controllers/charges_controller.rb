@@ -17,7 +17,7 @@ class ChargesController < ApplicationController
 
     current_user.add_role :premium
     flash[:notice] = "Thank you for becoming a premium Wikibloc member! You may now create private wikis!"
-    redirect_to wikis_path
+    redirect_to profile_path
 
     rescue Stripe::CardError => e
       flash[:alert] = e.message
@@ -25,11 +25,6 @@ class ChargesController < ApplicationController
   end
 
   def new
-    @stripe_btn_data = {
-      key: "#{ Rails.configuration.stripe[:publishable_key] }",
-      description: "Premium Wikibloc Membership - #{current_user.username}",
-      amount: Amount.default
-    }
   end
 
   private
@@ -37,7 +32,7 @@ class ChargesController < ApplicationController
   def check_if_premium
     if current_user.is_premium?
       flash[:notice] = "You are already a premium member!"
-      redirect_to wikis_path
+      redirect_to profile_path
     end
   end
 

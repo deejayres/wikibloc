@@ -50,7 +50,7 @@ class WikisController < ApplicationController
     authorize @wiki
     if @wiki.destroy
       flash[:notice] = "\"#{@wiki.title}\" was deleted successfully."
-      redirect_to wikis_path
+      redirect_to profile_path
     else
       flash.now[:alert] = "There was an error deleting the post. Please try again."
       render :show
