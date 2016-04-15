@@ -4,4 +4,11 @@ class UsersController < ApplicationController
   def show
     @user = User.find(current_user.id)
   end
+
+  def downgrade
+    @user = current_user
+
+    @user.downgrade
+    redirect_to profile_path
+  end
 end

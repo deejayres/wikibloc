@@ -7,6 +7,8 @@
           <h2 class="media-heading">Welcome, <%= @user.username %>!</h2>
           <% if @user.is_premium? %>
             <h5>Hey, thanks for being a premium user!  You may create your own private wikis.</h5>
+            <p>If you wish to no longer be a premium user, you may downgrade account. Your private wikis will then become public.</p>
+            <%= link_to "Downgrade", downgrade_user_path, method: :post, class: "btn btn-danger", data: {confirm: "Are you sure you want to downgrade your account? All your private wikis will be made public!"} %>
           <% else %>
             <h5>Not a premium member? Upgrade today to create your own private wiki where YOU choose your collaborators!</h5>
             <%= render partial: 'charges/new_charge' %>

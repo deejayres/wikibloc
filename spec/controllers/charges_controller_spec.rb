@@ -38,6 +38,22 @@ RSpec.describe ChargesController, type: :controller do
       expect(charge.paid).to eq(true)
     end
 
+    it "rejects a bad card" do
+      StripeMock.prepare_card_error(:card_declined)
+
+      customer = Stripe::Customer.create({
+        email: @my_user.email,
+        card: stripe_helper.generate_card_token
+      })
+
+      expect { Stripe::Charge.create(amount: 1, currency: 'usd') }.to raise_error {|e|
+        expect(e).to be_a Stripe::CardError
+        expect(e.http_status).to eq(402)
+        expect(e.code).to eq('card_declined')
+        expect(e.message).to eq("The card was declined")
+      }
+    end
+
     it "upgrades user to premium" do
       post :create
 

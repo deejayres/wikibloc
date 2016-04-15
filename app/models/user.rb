@@ -14,6 +14,10 @@ class User < ActiveRecord::Base
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
   end
 
+  def downgrade
+    self.remove_role :premium
+  end
+
   private
 
   def set_role
