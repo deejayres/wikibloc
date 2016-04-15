@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @user = current_user
 
     @user.downgrade
+    flash[:notice] = "You now have standard access."
     redirect_to profile_path
   end
 end

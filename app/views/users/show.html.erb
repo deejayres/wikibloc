@@ -1,34 +1,12 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
+<div class="container col-md-10 col-md-offset-1">
+  <br />
+  <h2 class="media-heading">Welcome, <%= @user.username %>!</h2>
 
-      <div class="media">
-        <div class ="media-body">
-          <h2 class="media-heading">Welcome, <%= @user.username %>!</h2>
-          <% if @user.is_premium? %>
-            <h5>Hey, thanks for being a premium user!  You may create your own private wikis.</h5>
-            <p>If you wish to no longer be a premium user, you may downgrade account. Your private wikis will then become public.</p>
-            <%= link_to "Downgrade", downgrade_user_path, method: :post, class: "btn btn-danger", data: {confirm: "Are you sure you want to downgrade your account? All your private wikis will be made public!"} %>
-          <% else %>
-            <h5>Not a premium member? Upgrade today to create your own private wiki where YOU choose your collaborators!</h5>
-            <%= render partial: 'charges/new_charge' %>
-          <% end %>
-        </div>
-
-        <% avatar_url = @user.avatar_url(128) %>
-        <% if avatar_url %>
-            <div class="media-right">
-              <figure>
-                <%= image_tag avatar_url, class: "media-object img-rounded" %>
-                <figcaption  style="text-align:center;"><small><a href="http://gravatar.com">Change your avatar.</a></small></figcaption>
-              </figure>
-            </div>
-        <% end %>
-      </div>
-
+  <div class ="row">
+    <div class="col-md-9">
       <div class="row vertical-align">
         <div class="col-md-6">
-          <h1 class="pull-left">Your Wikis</h1>
+          <h3 class="pull-left">Your Wikis</h3>
         </div>
         <div class="col-md-6">
           <span class="pull-right">
@@ -37,21 +15,40 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-12">
-          <div class="list-group">
-            <% @user.wikis.each do |wiki| %>
-              <a href="<%= wiki_path(wiki.id) %>" class="list-group-item">
-                <% if wiki.private %>
-                  <span class="badge">private</span>
-                <% end %>
-                <%= wiki.title %>
-              </a>
+      <div class="list-group">
+        <% @user.wikis.each do |wiki| %>
+          <a href="<%= wiki_path(wiki.id) %>" class="list-group-item">
+            <% if wiki.private %>
+              <span class="badge">private</span>
             <% end %>
-          </div>
-        </div>
+            <%= wiki.title %>
+          </a>
+        <% end %>
       </div>
-
     </div>
+
+    <div class="col-md-3" id="user-info">
+      <% avatar_url = @user.avatar_url(200) %>
+      <% if avatar_url %>
+        <figure>
+          <%= image_tag avatar_url, class: "media-object img-rounded center-block" %>
+          <figcaption  style="text-align:center;"><small><a href="http://gravatar.com">Change your avatar.</a></small></figcaption>
+        </figure>
+      <% end %>
+
+      <div>
+        <% if @user.is_premium? %>
+          <h5 style="text-align:center;">Hey, thanks for being a premium user!  You may create your own private wikis.</h5>
+          <p style="text-align:center;">If you wish to no longer be a premium user, you may downgrade account. Your private wikis will then become public.</p>
+          <%= link_to "Downgrade", downgrade_user_path, method: :post, class: "btn btn-danger center-block", data: {confirm: "Are you sure you want to downgrade your account? All your private wikis will be made public!"} %>
+        <% else %>
+          <h5 style="text-align:center;">Not a premium member? Upgrade today to create your own private wiki where YOU choose your collaborators!</h5>
+          <div style="text-align:center;">
+            <%= render partial: 'charges/new_charge' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
   </div>
 </div>
