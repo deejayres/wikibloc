@@ -2,7 +2,7 @@ class WikisController < ApplicationController
   before_action :authenticate_user!
   def index
     # @wikis = Wiki.all
-    @wikis = Wiki.search(params[:search])
+    @wikis = Wiki.search(params[:search]).visible_to(current_user)
   end
 
   def show
