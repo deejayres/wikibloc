@@ -2,13 +2,9 @@ class Wiki < ActiveRecord::Base
   belongs_to :user
   resourcify
 
-  scope :visible_to, -> (user) { where(private: false) << where(user: user) }
-  # scope :not_private, -> { where(private: false)}
-  # scope :visible_to, -> (user) { where{ (private == false) | (user == user) } }
-  #
-  # def self.visible_to(user)
-  #     self.where(private: false) << self.where(user: user)
-  # end
+  scope :publicly_viewable, -> { where( private: false ) }
+  scope :privately_viewable, -> { where( private: true ) }
+  scope :visible_to, -> ( user ) { user && (user.admin? || user.premium?) ? all : publicly_viewable }
 
   def self.search(search = nil)
     if search
