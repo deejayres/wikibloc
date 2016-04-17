@@ -36,6 +36,8 @@ group :development do
   gem 'spring'
   gem 'web-console', '~> 2.0'
   gem 'rails_layout'
+  gem 'better_errors'
+  gem 'binding_of_caller' 
 end
 
 group :test do
