@@ -21,7 +21,7 @@ gem 'pundit'
 gem 'rolify'
 gem 'redcarpet'
 gem 'stripe'
-
+gem 'squeel'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -36,6 +36,8 @@ group :development do
   gem 'spring'
   gem 'web-console', '~> 2.0'
   gem 'rails_layout'
+  gem 'better_errors'
+  gem 'binding_of_caller' 
 end
 
 group :test do

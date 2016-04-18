@@ -9,8 +9,15 @@
     <%= f.text_area :body, rows: 8, class: "form-control" %>
   </div>
 
+  <% if current_user.is_admin? || current_user.is_premium? %>
+    <div class="form-group">
+      <%= f.label :private, class: 'checkbox' do %>
+        <%= f.check_box :private %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Make Private
+      <% end %>
+    </div>
+  <% end %>
 
-  <div class="form-group">
-    <%= f.submit "Save",class: "btn btn-success btn-lrg" %>
-  </div>
+    <div class="form-group">
+      <%= f.submit "Save",class: "btn btn-success btn-lrg" %>
+    </div>
 <% end %>
