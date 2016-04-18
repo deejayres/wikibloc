@@ -18,18 +18,6 @@ class User < ActiveRecord::Base
     self.remove_role :premium
   end
 
-  def admin?
-    has_role? :admin
-  end
-
-  def premium?
-    has_role? :premium
-  end
-
-  def standard?
-    has_role? :standard
-  end
-
   private
 
   def set_role

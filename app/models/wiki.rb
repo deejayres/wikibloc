@@ -4,7 +4,7 @@ class Wiki < ActiveRecord::Base
 
   scope :publicly_viewable, -> { where( private: false ) }
   scope :privately_viewable, -> { where( private: true ) }
-  scope :visible_to, -> ( user ) { user && (user.admin? || user.premium?) ? all : publicly_viewable }
+  scope :visible_to, -> ( user ) { user && (user.is_admin? || user.is_premium?) ? all : publicly_viewable }
 
   def self.search(search = nil)
     if search

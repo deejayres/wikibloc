@@ -31,16 +31,21 @@ RSpec.describe Wiki, type: :model do
 
     describe "visible_to(user)" do
       it "returns all public wikis" do
-        expect(Wiki.visible_to(user)).to eq(Wiki.where(private: false))
+        expect(Wiki.visible_to(user)).to eq(Wiki.publicly_viewable)
       end
 
-      it "returns a user's private wikis" do
-        expect(Wiki.visible_to(user)).to include(Wiki.where(user: user, private: true))
+      it "doesnt return a private wiki" do
+        expect(Wiki.visible_to(user)).not_to include(private_wiki)
       end
 
-      it "doesn't show other_user's private wiki" do
-        expect(Wiki.visible_to(user)).not_to include(other_user_wiki)
+      it "shows premium user all wikis" do
+        user.add_role :premium
+
+        expect(Wiki.visible_to(user)).to include(private_wiki)
       end
+      # it "doesn't show other_user's private wiki" do
+      #   expect(Wiki.visible_to(user)).not_to include(other_user_wiki)
+      # end
     end
   end
 end

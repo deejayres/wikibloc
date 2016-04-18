@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
     @user.downgrade
     flash[:notice] = "You now have standard access."
+    @user.wikis.update!(:private, false)
     redirect_to profile_path
   end
 end
