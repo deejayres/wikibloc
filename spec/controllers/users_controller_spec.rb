@@ -27,22 +27,28 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
-  # describe "POST #downgrade" do
-  #   before do
-  #     my_user.add_role :premium
-  #   end
-  #
-  #   it "removes premium role" do
-  #     post :downgrade
-  #
-  #     expect(my_user.is_premium?).to be(false)
-  #   end
-  #
-  #   it "makes private wiki public" do
-  #     post :downgrade
-  #
-  #     expect(my_wiki.private).to be(false)
-  #   end
-  # end
+  describe "POST #downgrade" do
+    before(:each) do
+      my_user.add_role :premium
+      sign_in my_user
+      FactoryGirl.create(:wiki, user: my_user, private: true)
+    end
+
+    after(:each) do
+      sign_out my_user
+    end
+
+    it "removes premium role" do
+      post :downgrade
+
+      expect(my_user.is_premium?).to be(false)
+    end
+
+    it "makes private wiki public" do
+      post :downgrade
+  
+      expect(my_user.wikis.first.private).to be(false)
+    end
+  end
 
 end
