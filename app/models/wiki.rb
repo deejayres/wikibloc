@@ -13,4 +13,8 @@ class Wiki < ActiveRecord::Base
       self.all
     end
   end
+
+  def downgrade
+    self.update(private: false)
+  end
 end
