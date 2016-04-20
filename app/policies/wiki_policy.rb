@@ -38,5 +38,35 @@ class WikiPolicy
     end
   end
 
+  class Scope
+    attr_reader :user, :scope
 
+    def initialize(user, scope)
+      @user = user
+      @scope = scope
+    end
+
+    def resolve
+      wikis = []
+      if user.is_admin?
+        wikis = scope.all
+      elsif user.is_premium?
+        all_wikis = scope.all
+        all_wikis.each do |wiki|
+          if !wiki.private || wiki.user == user || wiki.collaborators.include?(user)
+            wikis << wiki
+          end
+        end
+      else
+        all_wikis = scope.all
+        wikis = []
+        all_wikis.each do |wiki|
+          if !wiki.private || wiki.collaborators.include?(user)
+            wikis << wiki
+          end
+        end
+      end
+      wikis
+    end
+  end
 end
