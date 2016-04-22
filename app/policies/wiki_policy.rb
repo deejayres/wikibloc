@@ -61,7 +61,7 @@ class WikiPolicy
         all_wikis = scope.all
         wikis = []
         all_wikis.each do |wiki|
-          if !wiki.private || wiki.collaborators.include?(user)
+          if !wiki.private || wiki.collaborators.pluck(:user_id).include?(user.id)
             wikis << wiki
           end
         end
