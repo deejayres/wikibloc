@@ -4,4 +4,11 @@ class Collaborator < ActiveRecord::Base
 
   validates :user_id, presence: true
   validates :wiki_id, presence: true
+
+  after_create :send_collaborator_email
+
+  private
+  def send_collaborator_email
+    CollaboratorMailer.new_collaborator(self).deliver_now
+  end
 end
