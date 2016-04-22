@@ -27,7 +27,7 @@ admin.add_role :admin
 premium = User.create!(
   username: "Premium",
   email: "premium@premium.premium",
-  password: "hellworld"
+  password: "helloworld"
 )
 premium.confirm
 premium.add_role :premium
