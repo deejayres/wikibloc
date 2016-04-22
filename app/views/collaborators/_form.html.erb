@@ -1,0 +1,17 @@
+<%= form_for [collaborator, wiki], url: collaborators_path, method: :post do |f| %>
+
+  <div class='form-group'>
+    <%= f.label :collaborators %>
+    <%= text_field_tag :collaborators_email,
+                     params[:collaborators_email],
+                     class: 'form-control',
+                     placeholder: "Enter collaborators emails (separated by commas)"
+                     %>
+
+  </div>
+
+  <div class="form-group">
+    <%= f.submit "Save",class: "btn btn-success btn-lrg" %>
+  </div>
+
+<% end %>

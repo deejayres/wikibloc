@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get "profile" => "users#show", :as => 'profile'
 
   resources :wikis
+    # resources :collaborators, only: [:create, :destroy]
+
 
   devise_for :users
 
@@ -13,5 +15,8 @@ Rails.application.routes.draw do
   resources :charges, only: [:new, :create]
 
   post "users/downgrade" => 'users#downgrade', :as => 'downgrade_user'
+
+  resources :collaborators, only: [:create, :destroy]
+
 
 end

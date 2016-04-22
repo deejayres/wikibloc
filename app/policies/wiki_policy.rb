@@ -32,7 +32,7 @@ class WikiPolicy
 
   def permitted_attributes
     if user.is_admin? || user.is_premium?
-      [:title, :body, :private]
+      [:title, :body, :private, :collaborators]
     else
       [:title, :body]
     end
@@ -53,7 +53,7 @@ class WikiPolicy
       elsif user.is_premium?
         all_wikis = scope.all
         all_wikis.each do |wiki|
-          if !wiki.private || wiki.user == user || wiki.collaborators.include?(user)
+          if !wiki.private || wiki.user == user || wiki.collaborators.pluck(:user_id).include?(user.id)
             wikis << wiki
           end
         end

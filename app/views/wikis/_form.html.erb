@@ -21,3 +21,5 @@
       <%= f.submit "Save",class: "btn btn-success btn-lrg" %>
     </div>
 <% end %>
+
+<%= render 'collaborators/form', collaborator: Collaborator.new, wiki: @wiki %>
