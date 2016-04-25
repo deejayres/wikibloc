@@ -1,11 +1,7 @@
 class WikisController < ApplicationController
   before_action :authenticate_user!
   def index
-    # # @wikis = Wiki.visible_to(current_user)
-    # # @wikis = @wikis.search(params[:search])
-    # binding.pry
     @wikis =  policy_scope(Wiki)
-    # # .search(params[:search])
     @wikis = Wiki.where(id: @wikis.map(&:id))
     @wikis = @wikis.search(params[:search])
 
