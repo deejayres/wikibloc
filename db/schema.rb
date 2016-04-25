@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160417185126) do
+ActiveRecord::Schema.define(version: 20160420023224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "collaborators", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "wiki_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "collaborators", ["id"], name: "index_collaborators_on_id", unique: true, using: :btree
+  add_index "collaborators", ["user_id"], name: "index_collaborators_on_user_id", using: :btree
+  add_index "collaborators", ["wiki_id"], name: "index_collaborators_on_wiki_id", using: :btree
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"

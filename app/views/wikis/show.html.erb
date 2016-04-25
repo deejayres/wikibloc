@@ -9,4 +9,28 @@
       <% end %>
     </div>
   </div>
+
+  <% if @wiki.private %>
+    <div class="col-md-8 col-md-offset-2">
+      <div class="row">
+        <h3>Collaborators:</h3>
+      </div>
+
+      <div class="row">
+        <div class="list-group">
+          <% @wiki.collaborators.each do |collaborator| %>
+            <p class="list-group-item">
+              <%= collaborator.user.username %>
+              <%= link_to raw('<span class="label label-danger pull-right">Remove</span>'), collaborator, method: :delete, data: {confirm: "Are you sure you want to remove this collaborator?"} %>
+            </p>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="row">
+        <%= render 'collaborators/form', collaborator: Collaborator.new, wiki: @wiki %>
+      </div>
+    </div>
+  <% end %>
+
 </div>

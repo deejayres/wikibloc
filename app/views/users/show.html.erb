@@ -24,6 +24,15 @@
             <%= wiki.title %>
           </a>
         <% end %>
+
+        <% @user.collaborators.map(&:wiki).each do |wiki| %>
+          <a href="<%= wiki_path(wiki.id) %>" class="list-group-item">
+            <% if wiki.private %>
+              <span class="badge">private</span>
+            <% end %>
+            <%= wiki.title %>
+          </a>
+        <% end %>
       </div>
     </div>
 
