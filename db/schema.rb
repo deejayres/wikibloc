@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160425233518) do
+ActiveRecord::Schema.define(version: 20160425234032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -91,8 +91,10 @@ ActiveRecord::Schema.define(version: 20160425233518) do
     t.integer  "user_id"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.string   "slug"
   end
 
+  add_index "wikis", ["slug"], name: "index_wikis_on_slug", unique: true, using: :btree
   add_index "wikis", ["user_id"], name: "index_wikis_on_user_id", using: :btree
 
   add_foreign_key "wikis", "users"
