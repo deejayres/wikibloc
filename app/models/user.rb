@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_many :wikis
-  has_many :collaborators
+  has_many :collaborators, dependent: :destroy
 
   after_initialize :set_role
 

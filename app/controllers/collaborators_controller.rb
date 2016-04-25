@@ -16,6 +16,14 @@ class CollaboratorsController < ApplicationController
   end
 
   def destroy
+    @collaborator = Collaborator.find(params[:id])
+    @wiki = @collaborator.wiki
 
+    if @collaborator.destroy
+      flash[:notice] = "\"#{@collaborator.user.username}\" is no longer a collaborator."
+      redirect_to @wiki
+    else
+      flash.now[:alert] = "There was an error removing this collaborator. Please try again."
+    end
   end
 end

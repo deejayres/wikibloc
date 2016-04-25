@@ -7,7 +7,11 @@ class WikiPolicy
   end
 
   def show?
-    true
+    if wiki.private
+      user == wiki.user || wiki.collaborators.pluck(:user_id).include?(user.id)
+    else
+      true
+    end
   end
 
   def new?
@@ -19,11 +23,19 @@ class WikiPolicy
   end
 
   def edit?
-    user.present?
+    if wiki.private
+      user == wiki.user || wiki.collaborators.pluck(:user_id).include?(user.id)
+    else
+      user.present?
+    end
   end
 
   def update?
-    user.present?
+    if wiki.private
+      user == wiki.user || wiki.collaborators.pluck(:user_id).include?(user.id)
+    else
+      user.present?
+    end
   end
 
   def destroy?

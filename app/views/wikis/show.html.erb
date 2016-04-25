@@ -21,6 +21,7 @@
           <% @wiki.collaborators.each do |collaborator| %>
             <p class="list-group-item">
               <%= collaborator.user.username %>
+              <%= link_to raw('<span class="label label-danger pull-right">Remove</span>'), collaborator, method: :delete, data: {confirm: "Are you sure you want to remove this collaborator?"} %>
             </p>
           <% end %>
         </div>
