@@ -8,6 +8,9 @@ class Wiki < ActiveRecord::Base
   scope :privately_viewable, -> { where( private: true ) }
   scope :visible_to, -> ( user ) { user && (user.is_admin? || user.is_premium?) ? all : publicly_viewable }
 
+  include FriendlyId
+  friendly_id :title, use: :slugged
+
   def self.search(search = nil)
     if search
       (self.where('title ILIKE ?', "%#{search}%").concat(self.where('body ILIKE ?', "%#{search}%")))

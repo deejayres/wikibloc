@@ -10,6 +10,9 @@ class User < ActiveRecord::Base
 
   after_initialize :set_role
 
+  include FriendlyId
+  friendly_id :username, use: :slugged
+
   def avatar_url(size)
     gravatar_id = Digest::MD5::hexdigest(self.email).downcase
     "http://gravatar.com/avatar/#{gravatar_id}.png?s=#{size}"
