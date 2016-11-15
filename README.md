@@ -3,7 +3,7 @@
 
 http://quiet-dawn-20405.herokuapp.com/
 
-Wikibloc is a Ruby on Rails app that allows users to create and share wikis in public environment, as well as create private documents via a premium membership.  This was one of my first projects created during my studies at Bloc.io.  The project took the form of user stories that we were free to resolve as we chose.
+Wikibloc is a Ruby on Rails app that allows users to create and share wikis in public environment, as well as create private documents via a premium membership.  
 
 The main challenge with this project involved user management, permissions, and scoping the correct wikis to users depending on their status as owner, premium user, or collaborator. For this I integrated three third-party APIs - Devise, Rolify, and Pundit - to implement these features.
 
